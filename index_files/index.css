@@ -1,0 +1,93 @@
+/***********************************************
+* top
+************************************************/
+
+div.index-title {
+	background-color: #BBDDFF;
+	padding: 3px 10px 3px 5px;
+	margin: 15px 0px 0px 0px;
+	font-family: Arial, Helvetica, sans-serif;;
+	font-size: 12pt; }
+	
+p.index-welcome {
+	line-height: 140%;
+	padding: 0px;
+	margin: 10px 10px 10px 5px; }
+	
+table#index-images {
+	margin-top: 15px; }
+	
+td#index-image-left {
+	padding-right: 15px; }
+
+td#index-image-middle {
+	padding-right: 15px; }
+	
+td#index-column-left {
+	vertical-align: top;
+	width: 280px;
+	padding-right: 10px; }
+	
+td#index-column-right {
+	vertical-align: top;
+	width: 280px; }
+
+/***********************************************
+* seminars
+************************************************/
+
+div.index-seminar {
+	line-height: 140%;
+	margin: 0px;
+	padding: 10px 10px 10px 5px;
+	border-bottom: 1px dotted #BBDDFF; }
+
+span.index-seminar-day {
+	font-weight: bold; }
+	
+a.index-seminar-title {
+	text-decoration: none; }
+	
+a.index-seminar-title:hover {
+	text-decoration: underline; }
+
+span.index-seminar-speaker {
+	font-style: italic; }
+	
+div.index-no-upcoming-seminar {
+	line-height: 140%;
+	margin: 0px;
+	padding: 10px 10px 5px 5px;
+	border-bottom: 1px dotted #BBDDFF; }
+
+/***********************************************
+* news
+************************************************/
+	
+div.index-news {
+	clear: both;
+	line-height: 140%;
+	padding: 10px 10px 10px 5px;
+	border-bottom: 1px dotted #BBDDFF; }
+	
+img.index-news-image {
+	margin: 0px 10px 0px 0px;
+	float: left; }
+	
+div.index-news-subject {
+	font-weight: bold; }
+
+/***********************************************
+* links
+************************************************/
+	
+div.index-list-links {
+	margin: 5px 0px 0px 10px;
+	line-height: 140%; }
+
+div.index-list-link {
+	background-image: url(images/arrow-right-dark-blue.gif);
+	background-repeat: no-repeat;
+	background-position: 0px 4px;
+	padding-left: 13px; }
+	
