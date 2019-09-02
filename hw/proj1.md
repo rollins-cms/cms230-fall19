@@ -110,10 +110,12 @@ The special number
 is the famous *golden ratio*, the most aesthetically pleasing of all proportions.
 -->
 
-![Eqn](http://www.sciweavers.org/tex2img.php?eq=%5C%5B%0AF_n%20%3D%20%5Cfrac%7B1%7D%7B%5Csqrt%7B5%7D%7D%20%5Cleft%28%20%5Cleft%28%20%5Cfrac%7B1%20%2B%20%5Csqrt%7B5%7D%7D%7B2%7D%20%5Cright%29%5En%20-%20%5Cleft%28%20%5Cfrac%7B1%20-%20%5Csqrt%7B5%7D%7D%7B2%7D%20%5Cright%29%5En%20%5Cright%29%0A%5C%5D&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0)
+![Eqn](./hw1_eqn1.jpg)
 
 The special number
-![Eqn2](http://www.sciweavers.org/tex2img.php?eq=%5C%5B%0A%5Cphi%20%3D%20%5Cfrac%7B1%20%2B%20%5Csqrt%7B5%7D%7D%7B2%7D%20%5Capprox%201.618033%5Cldots%0A%5C%5D&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0)
+
+![Eqn2](./hw1_eqn2.jpg)
+
 is the famous *golden ratio*, the most aesthetically pleasing of all proportions.
 
 The formula can be derived using **generating functions**, which are awesome but not part of this course.
