@@ -67,7 +67,7 @@ The output for the program with an input of `6` will look like this:
 Hey
 4
 Howdy
-HeyHowdy
+Hey
 ```
 If the input is <= 0 the function should not print anything.
 
