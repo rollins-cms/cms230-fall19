@@ -23,6 +23,8 @@ You'll follow the same basic procedure you used in our Lab1 exercise:
 ## Files and Grading
 Write 5 programs named `problem1.c`, `problem2.c`, etc. which meet the specifications described below.  Starter code for all of these has been provided for you.  There is also a `Makefile` provided for you.  You'll have to write your own in the future.  Take a look at it and see how it compiles executables for each problem you submit.  You can just type `make` at the prompt to compile all your files at once.  
 
+When you submit to Mimir, you will need to submit your Makefile and all 5 `.c` files at once.  The easiest way to do this is just to select the directory where your code is when you submit.  In other words, just select your `Project1` directory when Mimir asks you to select files for submission.  As long as your Makefile and 5 `.c` files are in that directory, the testcases will run.
+
 Your grade will be based on the tests you pass. I will also manually examine your files to make sure they have
 reasonable style and employ good problem solving strategies (i.e. you can't just print the expected answers). I reserve the right to deduct points for poor programming style (eg. mixing snake_case and camelCase, no comments, etc).
 
