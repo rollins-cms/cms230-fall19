@@ -1,7 +1,7 @@
 # I C U, You C Me
 
-## Due Date: Tues., Sept. 17, 11:59:59 PM
-(Late turn-in deadline (10% off): Thurs., Sept. 19, 11:59:59pm)
+## Due Date: Thurs., Sept. 19, 11:59:59 PM
+(Late turn-in deadline (10% off): Tues., Sept. 24, 11:59:59pm)
 
 ## Description
 The following problems will give you practice writing basic programs in C, as well as reviewing some fundamental programming concepts like loops and recursion.
