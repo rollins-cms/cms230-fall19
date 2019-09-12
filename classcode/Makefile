@@ -15,8 +15,11 @@
 
 # Add new commands under the all rule to build the rest of the project
 all:
+	gcc -Wall -Werror -o string_review string_review.c
+	gcc -Wall -Werror -o array_review array_review.c
 	gcc -Wall -Werror -o diffs diffs.c
 
 # Add new commands under clean to remove the executables built by all    
 clean:
-	rm  diffs
+	rm string_review
+	rm array_review
