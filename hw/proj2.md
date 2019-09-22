@@ -55,7 +55,7 @@ Write two programs, `encrypt.c` and `decrypt.c` that implement the cipher.
 ### Hints:
 
 * Start small: Make `encrypt.c` and `decrypt.c` which print a single character.  Copy and modify your `Makefile` from project 1 to build the executables `encrypt` and `decrypt`.  Submit this small set of files and ensure that the testcases are running even if you are failing them because your output is incorrect. (This means that your Makefile is correct and you don't have to worry about it again for this project).
-* Read the [notes on strings](https://github.com/vsummet/cms230notes/blob/master/c-programming/c-chap08-pointers_strings_and_structs.md) and [multidimensional arrays](https://github.com/vsummet/cms230notes/blob/master/c-programming/c-chap05-arrays-and-strings.md) that are
+* Read the [notes on strings](https://github.com/vsummet/cms230notes/blob/master/c-programming/c-chap08-pointers_strings.md) and [multidimensional arrays](https://github.com/vsummet/cms230notes/blob/master/c-programming/c-chap05-arrays-and-strings.md) that are
   relevant to this project.  The notes on strings also include information about using `fgets` for reading a string input from a user.
 * Look up the documentation for `fgets` if you need to see some more examples.
 * To convert a numeric character `c` to its corresponding integer, use `int digit = c - '0';`.  We'll talk more about this nifty trick when we talk about character encoding.
