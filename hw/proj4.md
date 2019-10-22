@@ -14,7 +14,7 @@ This project will let you practice using memory allocation and structures to imp
 ## Background:
 Recall that a hash table is used to store key-value pairs and allows for average O(1) insert and lookup times if the load on the table is not too high.
 
-A chained hash table consists of an array of "buckets". Each bucket contains a linked list of nodes that store the key-value pairs.
+A chained hash table consists of an array of "buckets". Each bucket contains a linked list of nodes that store the key-value pairs.  If you need a refresher on linked lists, (watch this video)[https://www.youtube.com/watch?v=VOpjAHCee7c].  It covers linked list concepts and implementation in C up to 14 minutes; after that, the end of the video is implementation in Java.
 
 To insert into the table, calculate an integer from the key and use it to determine the bucket that should hold the new key-value pair, as in the following pseudo-C implementation:
 
@@ -29,11 +29,14 @@ void hashtableInsert(HashTable* h, char* key, char* value) {
 
 You must implement functions to insert, lookup, and remove from the table.
 
-### Rehashing:  Recall that many hash table implementations, like Java's `HashMap`, track the load on the table as items are inserted and removed, where the load is defined to be the average number of items per bucket. If the load factor becomes too high---say, greater than .75 --- the implementation creates a new, larger table and rehashes all of the entries. You do not need to implement load-based rebalancing.
+### Rehashing:  
+Recall that many hash table implementations, like Java's `HashMap`, track the load on the table as items are inserted and removed, where the load is defined to be the average number of items per bucket. If the load factor becomes too high---say, greater than .75 --- the implementation creates a new, larger table and rehashes all of the entries. You do not need to implement load-based rebalancing.
 
-### Duplicates: The table can contain duplicate keys. A lookup or remove operation will always be satisfied by the first matching key that it encounters.
+### Duplicates: 
+The table can contain duplicate keys. A lookup or remove operation will always be satisfied by the first matching key that it encounters.
 
-### Hash Functions: `hashtable.c` contains a hash function that implements Java's basic `String` hashing function. Don't modify `hash` -- if you do, your program will probably hash everything to different buckets and your outputs won't match the tests' expected outputs. 
+### Hash Functions: 
+`hashtable.c` contains a `hash` function that implements Java's basic `String` hashing function. Don't modify `hash` -- if you do, your program will probably hash everything to different buckets and your outputs won't match the tests' expected outputs. 
 
 ## Testing and Grading:
 As always, I grade the last submission you make.
