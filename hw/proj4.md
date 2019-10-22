@@ -14,7 +14,7 @@ This project will let you practice using memory allocation and structures to imp
 ## Background:
 Recall that a hash table is used to store key-value pairs and allows for average O(1) insert and lookup times if the load on the table is not too high.
 
-A chained hash table consists of an array of "buckets". Each bucket contains a linked list of nodes that store the key-value pairs.  If you need a refresher on linked lists, (watch this video)[https://www.youtube.com/watch?v=VOpjAHCee7c].  It covers linked list concepts and implementation in C up to 14 minutes; after that, the end of the video is implementation in Java.
+A chained hash table consists of an array of "buckets". Each bucket contains a linked list of nodes that store the key-value pairs.  If you need a refresher on linked lists, [watch this video](https://www.youtube.com/watch?v=VOpjAHCee7c).  It covers linked list concepts and implementation in C up to 14 minutes; after that, the end of the video is implementation in Java.
 
 To insert into the table, calculate an integer from the key and use it to determine the bucket that should hold the new key-value pair, as in the following pseudo-C implementation:
 
