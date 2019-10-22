@@ -358,7 +358,7 @@ href="https://github.com/vsummet/cms230notes/blob/master/labs/lab2-intro_to_rpi.
 
 
 <div class="wrap-collabsible">
-  <input id="collapsible7" class="toggle" type="checkbox" checked>
+  <input id="collapsible7" class="toggle" type="checkbox">
   <label for="collapsible7" class="lbl-toggle">Week 7: Midterm Exam; Lab 3</label>
   <div class="collapsible-content">
     <div class="content-inner">
@@ -458,8 +458,8 @@ href="https://github.com/vsummet/cms230notes/blob/master/labs/lab2.5-git.md">Lab
 
 
 <div class="wrap-collabsible">
-  <input id="collapsible9" class="toggle" type="checkbox">
-  <label for="collapsible9" class="lbl-toggle">Week 9: ISAs</label>
+  <input id="collapsible9" class="toggle" type="checkbox" checked>
+  <label for="collapsible9" class="lbl-toggle">Week 9: Arrays of Pointers, GDB</label>
   <div class="collapsible-content">
     <div class="content-inner">
 <table cellpadding="20" width="100%">
@@ -473,32 +473,27 @@ href="https://github.com/vsummet/cms230notes/blob/master/labs/lab2.5-git.md">Lab
       <td>T, Oct 22</td>
       <td>
          <ul>
+		 <li>Read: <a href="https://github.com/vsummet/cms230notes/blob/master/c-programming/c-chap10-arrays-of-pointers.md">Arrays of pointers</a></li>
          <li>Hashtables, linked lists in C</li>
-  <li>HW5 assigned</li>
+  	 <li>Project 4 assigned</li>
 	 </ul>
       </td>
       <td>
          <ul></ul>
       </td>
    </tr>
+	   
+<tr>
+	<td>R, Oct 24</td>
+	<td>
+		<ul>
+			<li><a href="https://github.com/vsummet/cms230notes/blob/master/labs/lab-gdb.md">Lab 3 - Using GDB</a></li>
+			<li>RPi NOT needed for this lab</li>
+		</ul>
+	</td>
+	   </tr>
 
-   <tr>
-      <td>R, Oct 24</td>
-      <td>
-         <ul>
-            <li>Topic: ARM architecture and ISA</li>
-            <li>Topic: Instructions: load, store, math</li>
- 
-	</ul>
-      </td>
-      <td>
-      Classcode:<ul>
-      <li><a href="https://github.com/vsummet/IntroductionToComputerSystems/blob/master/Handouts/Assembly_Basics_and_Variables/first_program.s">first_program.s</a></li>
-      <li><a href="https://github.com/vsummet/IntroductionToComputerSystems/blob/master/Handouts/Assembly_Basics_and_Variables/addition.s">addition.s</a></li>
-      <li><a href="https://github.com/vsummet/IntroductionToComputerSystems/blob/master/Handouts/Assembly_Basics_and_Variables/add_two_variables.s">add_two_variables.s</a></li>
-      </ul>
-      </td>
-   </tr>
+
 </tbody></table>
 </div></div></div>
 
@@ -514,8 +509,26 @@ href="https://github.com/vsummet/cms230notes/blob/master/labs/lab2.5-git.md">Lab
       <td>Resources</td>
    </tr>
 
+	      <tr>
+      <td>T, Oct 29 </td>
+      <td>
+         <ul>
+            <li>Topic: ARM architecture and ISA</li>
+            <li>Topic: Instructions: load, store, math</li>
+ 
+	</ul>
+      </td>
+      <td>
+      Classcode:<ul>
+      <li><a href="https://github.com/vsummet/IntroductionToComputerSystems/blob/master/Handouts/Assembly_Basics_and_Variables/first_program.s">first_program.s</a></li>
+      <li><a href="https://github.com/vsummet/IntroductionToComputerSystems/blob/master/Handouts/Assembly_Basics_and_Variables/addition.s">addition.s</a></li>
+      <li><a href="https://github.com/vsummet/IntroductionToComputerSystems/blob/master/Handouts/Assembly_Basics_and_Variables/add_two_variables.s">add_two_variables.s</a></li>
+      </ul>
+      </td>
+   </tr>
+	   
    <tr>
-      <td>T, Oct 29</td>
+      <td>R, Oct 31</td>
       <td>
          <ul>
                 <li><a href="https://github.com/vsummet/IntroductionToComputerSystems/blob/master/Labs/3-Assemble.md">Lab: Assembly Programming</a></li>
@@ -527,23 +540,7 @@ href="https://github.com/vsummet/cms230notes/blob/master/labs/lab2.5-git.md">Lab
       </td>
    </tr>
 
-   <tr>
-      <td>R, Oct 31</td>
-      <td>
-         <ul>
-                <li>Topic: Assembly Programming - Branching,
-conditionals</li>
 
-	</ul>
-      </td>
-      <td>Classcode: <ul>
-      <li><a href="https://github.com/vsummet/IntroductionToComputerSystems/blob/master/Handouts/Assembly_Conditionals/unconditional_branch.s">unconditional_branch.s</a></li>
-      <li><a href="https://github.com/vsummet/IntroductionToComputerSystems/blob/master/Handouts/Assembly_Conditionals/if.s">if.s</a></li>
-      <li><a href="https://github.com/vsummet/IntroductionToComputerSystems/blob/master/Handouts/Assembly_Conditionals/if_greater_than.s">if_greater_than.s</a></li>
-      <li><a href="https://github.com/vsummet/IntroductionToComputerSystems/blob/master/Handouts/Assembly_Conditionals/if_else.s">if_else.s</a></li>
-      </ul>
-      </td>
-   </tr>
 </tbody></table>
 </div></div></div>
 
@@ -564,22 +561,28 @@ conditionals</li>
       <td>T, Nov 5</td>
       <td>
          <ul>
-            <li><a href="https://github.com/vsummet/IntroductionToComputerSystems/blob/master/Labs/4-Branching.md">Lab: Assembly Programming - Branching</a></li>
-            <li>Bring RPi and all cables to class with you!</li>
-            <li><a href="./homework.html">HW 4</a> due by 11:59pm</li>
-	     </ul>
+                <li>Topic: Assembly Programming - Branching,
+conditionals</li>
+		 <li>Project 4 due at 11:59pm</li>
+
+	</ul>
       </td>
-      <td>
-         <ul></ul>
+      <td>Classcode: <ul>
+      <li><a href="https://github.com/vsummet/IntroductionToComputerSystems/blob/master/Handouts/Assembly_Conditionals/unconditional_branch.s">unconditional_branch.s</a></li>
+      <li><a href="https://github.com/vsummet/IntroductionToComputerSystems/blob/master/Handouts/Assembly_Conditionals/if.s">if.s</a></li>
+      <li><a href="https://github.com/vsummet/IntroductionToComputerSystems/blob/master/Handouts/Assembly_Conditionals/if_greater_than.s">if_greater_than.s</a></li>
+      <li><a href="https://github.com/vsummet/IntroductionToComputerSystems/blob/master/Handouts/Assembly_Conditionals/if_else.s">if_else.s</a></li>
+      </ul>
       </td>
    </tr>
-
+	   
+	   
    <tr>
       <td>R, Nov 7</td>
       <td>
          <ul>
-                <li>Topic: Assembly Programming - Subroutines</li>
-       <li>Topic: Calling conventions</li>
+            <li><a href="https://github.com/vsummet/IntroductionToComputerSystems/blob/master/Labs/4-Branching.md">Lab: Assembly Programming - Branching</a></li>
+            <li>Bring RPi and all cables to class with you!</li>
        <li><a href="./homework.html">HW5 assigned</a></li>
 
 	</ul>
@@ -610,6 +613,8 @@ conditionals</li>
       <td>T, Nov 12</td>
       <td>
          <ul>
+		                 <li>Topic: Assembly Programming - Subroutines</li>
+       <li>Topic: Calling conventions</li>
          	<li>Topic: Functions calling functions; calling conventions</li>
             <li>Topic: Stack; Using the stack</li>
        		<li>Topic: Translating C to assembly</li>
