@@ -18,7 +18,7 @@ If there are 32 bits for an instruction there are $2^{32} possible different pat
 
 ARM has many instruction formats, and they are summarized in the table below.  We'll only be working with three of them: Data Processing, Branch, and Single Data Transfer (indicated by the red arrows).
 
-instruction formats.png
+![Instruction Format Summary](./images/instruction-formats.png)
 
 The bold numbers at the top of the table indicate the bit position.  The bits are labeled in positions 0-31 with 0 indicating the least significant bit and 31 indicating the most significant bit.  We often use several bits to represent a portion of the instruction.  For example, we might write "bits 28:31" meaning the 4 bit sequence labeled "COND" in the above instructions.
 
@@ -27,7 +27,7 @@ We'll look at each of the three formats in-detail.
 ### Branch Format:
 This image below shows the Branch Format which is used for the `b, bl, beq, bne, bgt, bge, blt,` and `ble` instructions.
 
-branch-format.gif
+![Branch Format Specification](./images/branch-format.GIF)
 
 All branch instructions use this same branch format.  The `cond` bits are set different patterns to indicate different "flavors" of branch instructions.  
 
@@ -59,7 +59,7 @@ Data movement: `MOV MVN`
 
 These instructions follow the Data Processing Format:
 
-data-processing.gif
+![Data Processing Format Specification](./images/data-processing-format.GIF)
 
 While each of these instructions share the same format, they can be distinguished by the 4 bit **operation code**, more commonly called the **opcode**, bits 21:24.  These are summarized in the following table.
 
@@ -76,5 +76,5 @@ Certain instructions only make use of some of the register operands.  For exampl
 
 
 ## Sources Used in Preparing this Summary
-https://www.arm.com/files/pdf/ARM_Arch_A8.pdf
-(SoC Analysis: On x86 vs ARMv8)[https://www.anandtech.com/show/9766/the-apple-ipad-pro-review/3], AandATech
+[The ARM Architecture: With a focus on v7A and Cortex-A8](https://www.arm.com/files/pdf/ARM_Arch_A8.pdf), ARM Limited
+[SoC Analysis: On x86 vs ARMv8](https://www.anandtech.com/show/9766/the-apple-ipad-pro-review/3), AandATech
