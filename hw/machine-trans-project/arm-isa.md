@@ -3,7 +3,8 @@ Note that this document is intended as a summary of the specific subset ARM inst
 
 ## RISC vs. CISC
 
-The ARM is a **Reduced Instruction Set Computer** (RISC) chipset.  Intel's x86 line is a **Complex Instruction Set Computer** (CISC) chiposet.  These were two competing design philosophies for many years.  However, most modern chips have at least some features of RISC.  
+The ARM is a **Reduced Instruction Set Computer** (RISC) chipset.  Intel's x86 line is a **Complex Instruction Set Computer** (CISC) chiposet.  These were two competing design philosophies for many years.  However, most modern chips have at least some features of RISC. 
+
 A characteristic of RISC chips is that they execute one instruction per machine cycle.  Each machine cycle, the processor fetches an instruction, decodes another, and executes yet another.  This pipelining makes RISC chips easy to understand an implement in hardware.  
 
 Another characteristic of RISC chips is that they are made up of **fixed width instructions**.  This means that all instructions have the same number of bits.  In ARM chips, instructions are always 32 bits long.  In contrast, x86 instructions are **variable width instructions** which can range from 1 to 15 bytes long!
@@ -29,6 +30,8 @@ This image below shows the Branch Format which is used for the `b, bl, beq, bne,
 
 ![Branch Format Specification](./images/branch-format.GIF)
 
+As can be seen in this figure, the 32 bit machine instruction is split up into 4 bit representing the condition, a fixed 3 bit pattern, a link bit, and a 24 bit offset.
+
 All branch instructions use this same branch format.  The `cond` bits are set different patterns to indicate different "flavors" of branch instructions.  
 
 The relevant condition bit settings for our subset of branching instructions are:
@@ -43,7 +46,7 @@ The relevant condition bit settings for our subset of branching instructions are
 | 1101 | LE | less than or equal |
 | 1110 | AL | always |
 
-Thus, a `bne` instruction would begin with the bits `0001` while a `bgt` instruction would begin with `1100`.  An unconditional branch would always be taken, and the `cond` bits would be set to `1110`.
+Thus, in a `bne` instruction bits 31:28 would be `0001` while a `bgt` instruction would begin with `1100`.  An unconditional branch would always be taken, and the `cond` bits would be set to `1110` (AL or always in the table above).
 
 Bits 25:27 are always set to 101 for branch instructions.  Bit 24 is the link bit.  It is set to 1 for a `bl` (branch and link) instruction but is otherwise set to 0.
 
@@ -61,12 +64,16 @@ These instructions follow the Data Processing Format:
 
 ![Data Processing Format Specification](./images/data-processing-format.GIF)
 
-While each of these instructions share the same format, they can be distinguished by the 4 bit **operation code**, more commonly called the **opcode**, bits 21:24.  These are summarized in the following table.
+While each of these instructions share the same format, they can be distinguished by the 4 bit **operation code**, more commonly called the **opcode**, bits 21:24.  The subset of instructions we are working with are summarized in the following table.  You can see the other opcodes in the figure above as well.
 
-opcode table.gif
+| Instruction | opcode | Execution |
+|---------|----------|------------------|
+|`SUB` | 0010 | operand1 - operand2 |
+|`ADD` | 0100 | operand1 + operand2 |
+|`CMP` | 1010 | as SUB, but result is not written |
+|`MOV` | 1101 | operand2 (operand1 is ignored) |
 
-Note that the immediate bit (bit 25) determines whether `operand2` is treated as an immediate value or a register identifier.  There is actually (a very elegant hack)[https://alisdair.mcdiarmid.org/arm-immediate-value-encoding/]
-which allows the last 12 bits to represent a full set of 32 bit values, but we're going to bypass the barrel shifting for simplicity's sake right now.
+Note that the immediate bit (bit 25) determines whether `operand2` is treated as an immediate value or a register identifier.  There is actually (a very elegant hack)[https://alisdair.mcdiarmid.org/arm-immediate-value-encoding/] which allows the last 12 bits to represent a full set of 32 bit values, but we're going to bypass the barrel shifting for simplicity's sake right now.
 
 Certain instructions only make use of some of the register operands.  For example, comparison instructions (such as `cmp`) only set flags in the APSR; they do not specify `Rd` (a destination register).  Data movement instructions (such as `mov`) only specify one source register or value and do not specify `Rn`.
 
