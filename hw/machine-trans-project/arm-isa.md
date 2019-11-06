@@ -73,15 +73,20 @@ While each of these instructions share the same format, they can be distinguishe
 |`CMP` | 1010 | as SUB, but result is not written |
 |`MOV` | 1101 | operand2 (operand1 is ignored) |
 
-Note that the immediate bit (bit 25) determines whether `operand2` is treated as an immediate value or a register identifier.  There is actually (a very elegant hack)[https://alisdair.mcdiarmid.org/arm-immediate-value-encoding/] which allows the last 12 bits to represent a full set of 32 bit values, but we're going to bypass the barrel shifting for simplicity's sake right now.
+Note that the immediate bit (bit 25) determines whether `operand2` is treated as an immediate value or a register identifier.  There is actually [a very elegant hack](https://alisdair.mcdiarmid.org/arm-immediate-value-encoding/) which allows the last 12 bits to represent a full set of 32 bit values, but we're going to bypass the barrel shifting for simplicity's sake right now.
 
 Certain instructions only make use of some of the register operands.  For example, comparison instructions (such as `cmp`) only set flags in the APSR; they do not specify `Rd` (a destination register).  Data movement instructions (such as `mov`) only specify one source register or value and do not specify `Rn`.
 
 ### Single Data Transfer Format
+The `ldr` and `str` instructions follow the Single Data Transfer instruction format:
 
+![Single Data Transfer Format Specification](./images/single-data-transfer-format.GIF)
 
+This is the most complex format yet!
 
 
 ## Sources Used in Preparing this Summary
-[The ARM Architecture: With a focus on v7A and Cortex-A8](https://www.arm.com/files/pdf/ARM_Arch_A8.pdf), ARM Limited
-[SoC Analysis: On x86 vs ARMv8](https://www.anandtech.com/show/9766/the-apple-ipad-pro-review/3), AandATech
+
+1. [The ARM Architecture: With a focus on v7A and Cortex-A8](https://www.arm.com/files/pdf/ARM_Arch_A8.pdf), ARM Limited
+2. [SoC Analysis: On x86 vs ARMv8](https://www.anandtech.com/show/9766/the-apple-ipad-pro-review/3), AandATech
+3. [ARM Instruction Set, Chapter 4](...)
