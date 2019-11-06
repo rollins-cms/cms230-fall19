@@ -30,7 +30,9 @@ This image below shows the Branch Format which is used for the `b, bl, beq, bne,
 
 ![Branch Format Specification](./images/branch-format.GIF)
 
-As can be seen in this figure, the 32 bit machine instruction is split up into 4 bit representing the condition, a fixed 3 bit pattern, a link bit, and a 24 bit offset.
+As can be seen in this figure, the 32 bit machine instruction is split up into 4 parts: bits representing the condition, a fixed 3 bit pattern, a link bit, and a 24 bit offset.
+
+As you might observe, ALL instructions in ARM can be conditionally executed.  That's what the condition field represents.  If we want an instruction to unconditionally execute, we will set the condition to represent "always".  More on that when we look at the branch instruction format in a minute.
 
 All branch instructions use this same branch format.  The `cond` bits are set different patterns to indicate different "flavors" of branch instructions.  
 
