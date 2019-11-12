@@ -1,5 +1,4 @@
-# A Binary Precaution Against Hex\footnote{Neil Gaiman, Smoke and Mirrors}
-
+# A Binary Precaution Against Hex*
 ## Due Thursday, December 5th, 11:59:59 PM
 
 ## Description
@@ -9,6 +8,7 @@ We know that assembly languages are designed to work with a specific chipset (fa
 * help you understand the mapping between (ARM) assembly and (ARM) machine language.
 * give you some experience reading and understanding instruction set architectures (ISAs) which describe the specifics of assembly instructions and their formats.
 * give you some practice manipulating bit patterns in C using bitwise operators.  
+* work with basic I/O in C
 
 To understand the mapping between assembly language menonics and the binary patterns of machine language we must understand how to *decode* the binary pattern into the higher (barely) level ARM instructions.  We must also be able to *encode* the ARM instructions to the matching bit pattern.  For this assignment, you'll only be decoding from binary pattern to ARM mnemonic, but you'll also understand the reverse encoding process.
 
@@ -17,19 +17,19 @@ This assignment is based on the real ARM ISA.  It only covers a subset of the IS
 ## Getting Started
 You will need a number of resources in your project to get started:
 
-* The documentation for the ARM ISA
-* Readings about bitwise operators in C and file I/O in C
-* A sample input file: `sample-input.ml`.
-* Some starter code: `decode.c`
+* The [documentation for the ARM ISA](./arm-isa.md)
+* Readings about [bitwise operators](https://github.com/vsummet/cms230notes/blob/master/c-programming/c-chap13-bitwise.md) in C and [file I/O](https://github.com/vsummet/cms230notes/blob/master/c-programming/c-chap12-fileio.md) in C
+* A sample input file: `sample-input.ml` (available on Mimir).
+* Some starter code: `decode.c` (available on Mimir)
 
 The starter code will read an input file, which is supplied on the command line:
 
 ```
-  gcc -Wall -Werror -o decode decode.c
-  ./decode sample-input.ml
+  prompt$> gcc -Wall -Werror -o decode decode.c
+  prompt$> ./decode sample-input.ml
 ```
 
-Each line in the input file contains a 32-bit long bit pattern which, when decoded correctly, gives a valid ARM assembly instruction.  For this assignment, we'll be working with three categories of instructions.  Each category contains multiple instructions:
+Each line in the input file contains a 32-bit long bit pattern which, when decoded correctly, gives a valid ARM assembly instruction.  For this assignment, we'll be working with three categories of instructions.  Each category contains multiple assembly instructions:
 
 1. Data Processing Instructions: `mov`, `add`, `sub`, and `cmp`.
 2. Branching Instructions: `b`, `bne`, `beq`, `bgt`, `bge`, `blt`, `ble`, and `bl`
@@ -39,13 +39,13 @@ While this is a small subset of ARM instructions, as you've seen, it allows us t
 
 Begin by reading the `decode.c` file.  There are comments in the file directing you.  Remember to keep your development efforts small!  Don't try to write the entire program at once!  This assignment naturally decomposes since you have three categories of instructions to deal with -> make each category its own function!
 
-The end result of your program is that it should output the assembly language mapping for the given bit pattern.  For example, the bit pattern `0xe0823003` translates to the assembly instruction `add r3, r2, r3`.  To understand these mappings, you'll need to read the ISA.  
+The end result of your program is that it should output the assembly language mapping for the given bit pattern.  Each machine langauge instruction in the input file should result in one line of output printed to the screen.  For example, the bit pattern `0xe0823003` translates to the assembly instruction `add r3, r2, r3`.  To understand these mappings, you'll need to read the ISA.  
 
 ## Grading and Submission
 Don't forget to complete the README.md file.  Make sure your code is clean and commented and follows style conventions.  As always, I grade your last submission.
 
 ## Tips and Tricks
-* I recommend you begin by working with the small sample file.  Try decoding some of these \textbf{on paper} using the ISA document as a guide.  The ISA has a lot of useful info in it.  Thinking about and working with the concepts contained in it will help you formulate a plan for your code and save you time down the road.
+* I recommend you begin by working with the small sample file.  Try decoding some of these **on paper** using the ISA document as a guide.  The ISA has a lot of useful info in it.  Thinking about and working with the concepts contained in it will help you formulate a plan for your code and save you time down the road.
 * Remember that bitwise operators have different precedence.  Just like the mathematical expression `(4 + 2) * 3` evaluates differently than `4 + 2 * 3`, the bitwise expressions `(4 & 15) >> 2` evaluates differently than `4 & 15 >> 2`.  Use parentheses to ensure you get the evaluation order you intend.
 * Remember you can express integers in hex or binary format:
 ``` 
@@ -54,3 +54,7 @@ Don't forget to complete the README.md file.  Make sure your code is clean and c
 ```
 This fact is very useful when you're trying to extract specific bits.
   
+<hr>
+
+* footnote: title from Neil Gaiman, Smoke and Mirrors
+
