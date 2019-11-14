@@ -87,9 +87,7 @@ The `ldr` and `str` instructions follow the Single Data Transfer instruction for
 This is the most complex format yet!  Upon closer inspection, however, we'll find it very close to the data processing format.  While we can safely ignore many of the bits of each instruction, there are a few which we need to pay attention to.  
 It turns out that loads and stores share the same representation except for a single bit: the L bit, bit 20.  This is set to 1 if the instruction is a load and 0 if it is a store.
 
-Just as with the data processing format, there is an I bit (bit 25) which specifies whether or not the last 12 bits of the instruction are treated as an immediate value to be added to the base register to obtain an address or as a register.  This instruction will be in the form `ldr rD, [BaseRegister, #imm]`.  This will allow us to distinguish between instructions using offset addressing and instructions without the immediate value, such as `ldr r0, [r1]`, in which the 2nd operand is just a value in the base register.  In the first, the I bit will be 0 and in the second, the I bit will be 1.
-
-
+Just as with the data processing format, there is an I bit (bit 25) which specifies whether or not the last 12 bits of the instruction are treated as an immediate value to be added to the base register to obtain an address or as a register.  This instruction will be in the form `ldr rD, [BaseRegister, #imm]`.  If the immediate value is 0, it is not listed in the assembly instruction, leading to the more familiar format: `ldr rD, [BaseRegister]`.  However, there's one small hitch.  We treat the lower 12 bits as an immediate value if the I bit is set to **0**, not 1.  This behavior seems backwards, so requires a bit of careful attention.
 
 
 ## Sources Used in Preparing this Summary
